@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registration</ion-title>
+    <ion-button slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ion-padding">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirm password</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmpassword"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="tryRegistration()" [disabled]="disabled">Register</ion-button>
+    <ion-button expand="block" fill="outline" (click)="goToLogin()">Login</ion-button>
+   
+</ion-list>
+</ion-content>
